@@ -1,15 +1,10 @@
 import styles from './Auth.module.css'
-import { useState } from 'react'
 import Link from 'next/link'
 import Input from './Input.js'
 import Button from './Button.js'
+import ErrorText from './ErrorText.js'
 
-const SignInForm = ({ handleSubmit, errorMessage }) => {
-    const [errorMsg, setErrorMsg] = useState('')
-    if (errorMsg) {
-        setErrorMsg(errorMessage)
-    }
-
+const SignInForm = ({ handleSubmit, error }) => {
     return (
         <div className={styles.container}> 
             <h2 className={styles.title}>Sign in</h2>
@@ -19,8 +14,8 @@ const SignInForm = ({ handleSubmit, errorMessage }) => {
                 <Input label="Type your password" 
                     attr={{ type: "password", name:"password", required: true }} />
                 <Button label="Sign in"/>
-                
-                {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}
+
+                <ErrorText error={error} />
 
                 <p className={styles.createAccount}>
                     <Link href="/signup">

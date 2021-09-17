@@ -10,6 +10,11 @@
       "StackName": "amplify-glorifiedauthlist-dev-33123",
       "StackId": "arn:aws:cloudformation:eu-west-2:756525791342:stack/amplify-glorifiedauthlist-dev-33123/f9dc6680-1756-11ec-8fd6-069242f8cf3e",
       "AmplifyAppId": "d182aet07hkis6"
+    },
+    "categories": {
+      "auth": {
+        "glorifiedauthlist899cfeef": {}
+      }
     }
   }
 }
